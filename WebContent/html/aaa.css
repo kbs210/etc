@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+	#title ~ div{
+		color : blue
+	}
+	
+	#title + div {
+		color : purple
+	}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 자바와 자바스크립트 데이터 전달 시 한글, 특수문자를 처리하기위해
+		// encoding을 해준다
+		var url = "?><!@#^*%^&!@#kitri+-()"
+		// 인터넷주소에서 사용하는 특수문자(escape문자 ; , / ? : @ & = + $ – _ . ! ~ * ‘ ( ) # a-z 0-9)를 제외한 문자를 변환합니다
+		var a=encodeURI(url);
+		var b=decodeURI(a);
+		
+		//  – _ . ! ~ * ‘ ( ) a-z 0-9 를제외하고 변환합니다
+		var c = encodeURIComponent(url);
+		var d = decodeURIComponent(c);
+		
+		document.write(url);
+		document.write("<br>");
+		document.write(a);
+		document.write("<br>");
+		document.write(b);
+		document.write("<br>");
+		document.write("<br><br><br>");
+		document.write(url);
+		document.write("<br>");
+		document.write(c);
+		document.write("<br>");
+		document.write(d);
+		document.write("<br>");
+		
+		
+		
+	</script>
+</body>
+</html>

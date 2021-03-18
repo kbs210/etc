@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function myClick(){
+		window.alert("myClick 함수")
+		//window객체 생략가능
+	}
+	
+	function mySub(){
+		alert("mySub함수")
+	}
+	
+	function dblSub(){
+		alert("dblSub함수")
+	}
+	
+	function bigText(obj){
+		obj.style.color="red";
+		obj.style.fontSize="40px";
+		obj.style.fontFamily="궁서체";
+		obj.href="https://www.naver.com";
+	}
+	
+	function nomalText(obj){
+		obj.style.color="blue";
+		obj.style.fontSize="80px";
+		obj.style.fontFamily="맑은고딕";
+		
+	}
+	
+	
+</script>
+
+</head>
+<body>
+<!-- 
+마우스이벤트
+onclick
+ondblclick
+onmouseout
+onmouseover
+onmouseup
+onmousedown
+ -->
+	<input type="button" value="확인하세요" onclick="myClick()">
+	<br><br><br>
+	<span onclick="myClick()">배고프다</span>
+	<br><br><br>
+	<input type="button" value="확인하세요" onmousedown="myClick()">
+	<br><br><br>
+	<input type="button" value="확인하세요" onmouseup="mySub()">
+	<br><br><br>
+	<input type="button" value="확인하세요" ondblclick="dblSub()">
+	<br><br><br>
+	<a href="#" onmouseover="bigText(this)" onmouseout="nomalText(this)">안녕하세요</a>	
+	
+</body>
+</html>

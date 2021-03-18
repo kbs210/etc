@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+	.col{
+		font-size: 20px;
+		color: magenta;
+		font-weight: bold;
+	}
+
+</style>
+
+</head>
+<body>
+	
+	<span id ="content1">content1</span>
+	<div>content2</div>
+	<!-- <span name="content3">content3</span> -->	
+	<div class="content4">content4</div>
+	<br><br><br><br><br>
+	
+	<div id="div1">div1입니다</div>
+	<div id="div2">div2입니다</div>
+	<div>div3입니다 (id가 없습니다)</div>
+	
+	
+	<script type="text/javascript">
+	
+		console.log(document.getElementById("content1"));
+		console.log(document.getElementsByTagName("div"));
+		/* console.log(document.getElementsByName("content3")); */
+		console.log(document.getElementsByClassName("content4"));
+		
+		/* 
+			Javascript를 이용해 HTML요소를 변경하는 법
+			getAttribute, setAttribute
+		*/
+		
+		var div1 = document.getElementById("div1");
+		div1.style.color="cyan";
+		
+		var div2 = document.getElementById("div2");
+		div2.setAttribute("class","col");
+		
+		
+		
+	</script>
+	
+	
+	
+</body>
+</html>

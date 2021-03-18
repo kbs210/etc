@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+
+<body>
+
+<!--
+ map 하나의 이미지에 여러개의 링크를 생성한다
+ alt		text : area(영역) 대체 텍스트
+ coords		x1,y1,x2,y2(좌표)
+ href		url : area(영역) 링크
+ shape		영역 모양
+ 
+ ***중요*** img요소의 usemap과 map 요소의 name 이름은 동일 해야한다
+ -->
+	
+	<img alt="dasdas" src="logo.jpg" usemap="#logo">
+	<map name="logo">
+		<address>
+			<area shape = "rect"
+					href = "https://www.google.com"
+					coords = "1,1,307,143" target = "black" 
+			>
+			<area shape = "rect"
+					href = "https://www.naver.com"
+					coords = "308,1,615,143" target = "black" 
+			>
+		</address>
+	</map>
+
+
+</body>
+
+
+</html>

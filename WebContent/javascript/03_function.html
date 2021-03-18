@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+
+	함수
+	
+	프로그램 실행 중 동적으로 데이터를 생성 
+
+ -->
+	<script type="text/javascript">
+	
+		function sub(){
+			document.write("<h3>sub function입니다</h3>");
+		}
+		
+		sub();
+		
+		function hap(a,b){
+			document.write("<h3>" + a + ", " + b + "</h3>");
+		}
+		
+		hap(10, 20);
+		
+		hap(5, );
+		
+		function apple(){
+			return "apple";
+		}
+		
+		var str1 = apple();
+		document.write("<h3>" + apple() + "</h3>")
+		document.write("<h3>" + str1 + "</h3>")
+	
+		
+		/* 
+		객체
+		
+		이름과 값으로 구성된 집합
+		묹열, 숫자, boolean, undefined, null 를 제외한 모든 값은 객체
+		전역객체를 제외한 자바스크립트 객체는 동적으로 추가 또는 삭제가 가능하다
+		
+		객체 속성 값 조회
+		객체는 .을 사용하거나 []를 사용해서 값에 접근
+		객체에 없는 속성에 접근으 하면 undifined가 반환
+		
+		
+		*/
+		
+		/* Window 객체 < javascript의 최상위 전역 객체 */
+		
+		/* var empty_object = {};
+		var member = {
+				"user-name" : "kitri",
+				"age" : 20,
+				"city" : "서울"
+		};
+		
+		console.log(member.age);
+		console.log(member["age"]);
+		
+		// 연산자가 포한 되어있을 경우 오류 발생함으로 대괄호 사용
+		console.log(member.user-name);
+		console.log(member["user-name"]);
+		
+		member.age = 30;
+		console.log(member.age);
+		
+		member["city"] = "제주도";
+		console.log(member["city"]);
+		
+		member.tel = "010-1234-5678";
+		console.log(member.tel);
+		
+		// 객체 참조
+		var x = member;
+		console.log(x.city);
+		x.city = "부산";
+		console.log(x.city); */
+		
+		
+		/* alert, confirm, prompt */
+		
+		function openAlert() {
+			alert("알림창입니다");
+		}
+		
+		openAlert();
+		
+		function openConfirm() {
+			if(confirm("확인하시겠습니까?")){
+				console.log("확인을 눌렀습니다");
+			} else {
+				console.log("취소를 눌렀습니다");
+			}
+		}
+		
+		openConfirm();
+		
+		function openPrompt() {
+			var txt = prompt("문자열을 입력해주세요", "50자 이내로 작성하세요")
+			console.log(txt);
+		}
+		
+		openPrompt();
+		
+		
+		
+		
+	</script>
+</body>
+</html>

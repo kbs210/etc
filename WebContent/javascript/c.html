@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<!--
+<div style="text-align: left; width: 500px; margin: auto;">
+	<div>
+		<h3 style="text-align:center;">*온라인 설문조사 만들기*</h3>
+	</div>
+	<div >
+		<label>질문:</label>
+		<br>
+		<input type="text">
+		<br>
+		<br>
+		<label>답변:</label>
+		<input type="button" value="항목추가">
+		<br>
+		<input type="text">
+		<br>
+		<br>
+	</div>
+	<div style="text-align: center;">
+		<input type="button" value="설문만들기">
+		<input type="button" value="초기화">
+	</div>
+</div>
+ -->
+
+
+ <div class="container" align="center">
+ 	<div class="col-lg-6">
+ 	
+ 		<form action="">
+ 		
+ 			<h3>온라인 설문조사 만들기</h3>
+ 		
+ 			<div class = "form-group" align="left">
+ 				<label>질문 : </label>
+ 				<input type="text" placeholder="질문 제목을 입력하세요" class="form-control">
+ 			</div>
+ 		
+ 			<div class = "form-group" align="left" id="answerDiv">
+ 			 	<label>답변 : 
+				<button type="button" id="appendBtn" class="btn btn-warning">항목추가</button>
+				</label>
+				<input type="text" placeholder="답변을 입력하세요" class="form-control">
+ 			</div>
+ 		
+ 			<div class = "form-group" align="center">
+ 				<button type="submit" class="btn btn-primary">설문 만들기</button>
+ 				<button type="reset" class="btn btn-danger">초기화</button>
+ 			</div>
+ 		
+ 		</form>
+ 	</div>
+ </div>
+
+ <script type="text/javascript">
+ 	
+ 	//함수 표현식 = 익명함수
+ 	document.getElementById("appendBtn").onclick = function(){
+ 		//input 태그를 담은 변수 생성
+ 		var inputEl = document.createElement("input")//<input> 
+ 		inputEl.setAttribute("type","text");//<input type ="text"
+ 		inputEl.setAttribute("class","form-control");//<input class ="form-control"
+ 		inputEl.setAttribute("name","answer");
+ 	
+
+ 		//삭제버튼을 담는 변수 생성
+ 		var delBtn = document.createElement("input");
+ 		delBtn.setAttribute("type","button");
+ 		delBtn.setAttribute("value","X");
+ 		delBtn.setAttribute("onclick","deleteAnswer(this)");
+ 	
+ 		// input태그와 삭제버트을 감싸는 div를 생성
+ 		var div = document.createElement("div")
+ 		div.appendChild(inputEl);
+ 		div.appendChild(delBtn);
+ 	
+ 		//생성된 태그를 모아놓은 div를 답변에 해당하는 (answerDiv)자식으로 동적 생성
+ 		var answerDiv = document.getElementById("answerDiv");
+ 		answerDiv.appendChild(div);
+ 	}
+ 	
+ 	//함수 선언문
+ 	function deleteAnswer(obj){
+ 		// 부모 div를 담는 변수
+ 		var answerDiv = document.getElementById("answerDiv");
+ 		// 변수에 선택된 자식
+		answerDiv.removeChild(obj.parentElement);
+ 	}
+ 	
+ 	 
+ </script>
+ 
+</body>
+</html>

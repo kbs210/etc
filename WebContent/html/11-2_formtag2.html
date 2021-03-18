@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h3>select box</h3>
+	선호채널
+	<select id = "chanel" name = "chanel" size = 4" multiple = "multiple">
+		<option value = "sbs"> SBS </option>
+		<option value = "kbs"> KBS </option>
+		<option value = "mbc" selected = "selected"> MBC</option>
+		<option value = "jtbc"> JTBC </option>
+		<option value = "ytn"> YTN </option>
+		<option value = "tvn"> TVN </option>
+		
+		
+	</select>
+
+
+
+
+
+	<h3>select box</h3>
+	선호채널
+	<select id = "chanel" name = "chanel">
+	<optgroup label="지상파">
+		<option value = "sbs"> SBS </option>
+		<option value = "kbs"> KBS </option>
+		<option value = "mbc" selected = "selected"> MBC</option>
+	</optgroup>
+
+	<optgroup label="종합편성">
+		<option value = "jtbc"> JTBC </option>
+		<option value = "ytn"> YTN </option>
+		<option value = "tvn"> TVN </option>
+	</optgroup>
+	</select>
+	
+	<h3>datalist</h3>
+	<label> 응원팀 </label>
+	<input type = "text" id = "bbteam" list = "teamlist">
+	<datalist id = "teamlist">
+	 	<option value = "NC" label = "NC"/>
+	 	<option value = "BEAR" label = "BEAR"/>
+	 	<option value = "KT" label = "KT" />
+	 	<option value = "LG"  label = "LG"/>
+	 	<option value = "키움" label = "키움"/>
+	 	<option value = "KIA" label = "KIA"/>
+	 	<option value = "롯데" label = "롯데"/>
+	 	<option value = "삼성" label = "삼성"/>
+	 	<option value = "SK" label = "SK"/>
+	 	<option value = "한화" label = "한화"/>
+	 
+	 </datalist>
+	 
+	 <h3>textarea</h3>
+	 <textarea rows = "10" cols ="50" name = "msg">111</textarea>
+	 
+	 <!--
+	 
+	 get / post
+	 
+	 get
+	 키와 값을 이루어져 있다 (식별자/ 값, 파라미터 네임/ 파라미터 벨류)
+	 웹브라우저 주소로 데이터를 전달
+	 주소표시줄을 통해 직관적으로 볼 수 있기 때문에 보안이 필요없는 곳에서 사용
+	 255자 이내 데이터만 가능하다
+	 
+	 post
+	 주소표시줄을 통해 노출 x (웹브라우저이ㅡ 헤더 부분에 데이터를 전달)
+	 보안이 필요한 경우 사용
+	 
+	 -->
+	 
+		
+		
+
+
+
+
+
+
+
+
+
+</body>
+</html>
