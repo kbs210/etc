@@ -17,6 +17,7 @@ public class WriteOkCommand implements Command{
 		
 		BoardDto boardDto = new BoardDto();
 		
+		
 		boardDto.setBoardNumber(Integer.parseInt(request.getParameter("boardNumber")));
 		boardDto.setGroupNumber(Integer.parseInt(request.getParameter("groupNumber")));
 		boardDto.setSequenceNumber(Integer.parseInt(request.getParameter("sequenceNumber")));
@@ -32,6 +33,8 @@ public class WriteOkCommand implements Command{
 		int check = BoardDao.getInstance().insert(boardDto);
 		
 		request.setAttribute("check", check);
+		
+
 		
 		return "/WEB-INF/board/writeOk.jsp";
 	}
