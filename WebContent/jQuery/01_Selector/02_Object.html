@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+span, div{
+	font-size:30px;
+}
+
+.redtext{
+	color:red;
+}
+
+.italictext{
+	font-style: italic;
+}
+
+.boldtext{
+	font-style: bold;
+}
+
+.backgroundtext{
+	background: blue;
+}
+
+</style>
+
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("*").addClass("redtext");
+	$("span").addClass("italictext");
+	$("div").addClass("boldtext");
+	$("span, div").addClass("backgroundtext");
+})
+
+</script>
+
+</head>
+<body>
+	<span>span 문서 엘리먼트</span>
+	<br><br>
+	
+	<div>div 문서 엘리먼트</div>
+	<br><br>
+	
+	<b>문서 엘리먼트</b>
+	<br><br>
+</body>
+</html>

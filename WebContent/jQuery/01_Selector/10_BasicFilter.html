@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("p:even").css("color", "red"); //짝수 선택
+		$("p:first").css("color", "blue");
+		$("p:last").css("color", "purple");
+		$("p:eq(2)").css("color", "green");//index값
+	});
+</script>
+</head>
+<body>
+	<p>1월</p>
+	<p>2월</p>
+	<p>3월</p>
+	<p>4월</p>
+	<p>5월</p>
+	<p>6월</p>
+	<p>7월</p>
+	<p>8월</p>
+	<p>9월</p>
+	<p>10월</p>
+	<p>11월</p>
+	<p>12월</p>
+	<br><br>
+	
+	<div>
+		<ul class="first">
+			<li>사과</li>
+			<li>바나나</li>
+			<li>딸기</li>
+			<li>포도</li>
+		</ul>
+	</div>
+	<div>
+		<ul class="second">
+			<li>짜장면</li>
+			<li>짬뽕</li>
+			<li>볶음밥</li>
+			<li>탕수육</li>
+		</ul>
+	</div>
+	<div>
+		<ul class="third">
+			<li>콜라</li>
+			<li>사이다</li>
+			<li>맥주</li>
+			<li>소주</li>
+		</ul>
+	</div>
+
+	
+	
+</body>
+</html>
