@@ -21,7 +21,7 @@ public class ListCommand implements Command{
 		
 		int currentPage = Integer.parseInt(pageNumber);
 		
-		int boardSize = 2;
+		int boardSize = 5;
 		int startRow = (currentPage - 1) * boardSize + 1;
 		int endRow = currentPage * boardSize;
 		

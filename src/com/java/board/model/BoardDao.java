@@ -77,7 +77,7 @@ public class BoardDao {
 		writeNumber(boardDto, conn);
 
 		try {
-			String sql = "insert into board(board_number, writer, subject, email, content, password, write_date, read_count, group_number, sequence_number, sequence_level) values(board_number_seq.nextval, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "insert into board(board_number, writer, subject, email, content, password, write_date, read_count, group_number, sequence_number, sequence_level, file_name, path, file_size) values(board_number_seq.nextval, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			conn = ConnectionProvider.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, boardDto.getWriter());
@@ -90,6 +90,12 @@ public class BoardDao {
 			pstmt.setInt(8, boardDto.getGroupNumber());
 			pstmt.setInt(9, boardDto.getSequenceNumber());
 			pstmt.setInt(10, boardDto.getSequenceLevel());
+			pstmt.setString(11, boardDto.getFileName());
+			pstmt.setString(12, boardDto.getPath());
+			pstmt.setLong(13, boardDto.getFileSize());
+			
+			
+			
 
 			value = pstmt.executeUpdate();
 
@@ -188,7 +194,117 @@ public class BoardDao {
 		
 		return boardList;
 	}
-	
+
+	public BoardDto read(int boardNumber) {
+			
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		BoardDto boardDto = null;
+		
+		try {
+			conn = ConnectionProvider.getConnection();
+			conn.setAutoCommit(false);
+			
+			String sqlUpdate = "update board set read_count=read_count+1 where board_number=?" ;
+			
+			pstmt = conn.prepareStatement(sqlUpdate);
+			pstmt.setInt(1, boardNumber);
+			
+			int value = pstmt.executeUpdate();
+			
+			if(value > 0) {
+				String sqlSelect = "select * from board where board_number=?";
+				pstmt = conn.prepareStatement(sqlSelect);
+				pstmt.setInt(1, boardNumber);
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {
+					boardDto = new BoardDto();
+					boardDto.setBoardNumber(rs.getInt("board_number"));
+					boardDto.setWriter(rs.getString("writer"));
+					boardDto.setSubject(rs.getString("subject"));
+					boardDto.setEmail(rs.getString("email"));
+					boardDto.setContent(rs.getString("content"));
+					boardDto.setPassword(rs.getString("password"));
+					boardDto.setWriteDate(new Date(rs.getTimestamp("write_date").getTime()));
+					boardDto.setReadCount(rs.getInt("read_count"));
+					boardDto.setGroupNumber(rs.getInt("group_number"));
+					boardDto.setSequenceNumber(rs.getInt("sequence_number"));
+					boardDto.setSequenceLevel(rs.getInt("sequence_level"));
+					boardDto.setFileName(rs.getString("file_name"));
+					
+				}
+				conn.commit();
+			}
+					
+		} catch (Exception e) {
+			e.printStackTrace();
+			jdbcUtil.rollback(conn);
+		} finally{
+			jdbcUtil.close(rs);
+			jdbcUtil.close(pstmt);
+			jdbcUtil.close(conn);
+			
+		}
+		
+		return boardDto;
+	}
+
+	public int update(BoardDto boardDto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int value = 0;
+		
+		try {
+			String sql = "update board set subject=?, email = ?, content= ?, password = ? where board_number = ?";
+			conn = ConnectionProvider.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, boardDto.getSubject());
+			pstmt.setString(2, boardDto.getEmail());
+			pstmt.setString(3, boardDto.getContent());
+			pstmt.setString(4, boardDto.getPassword());
+			pstmt.setInt(5, boardDto.getBoardNumber());
+			
+			value = pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		} finally {
+			jdbcUtil.close(pstmt);
+			jdbcUtil.close(conn);
+		}
+
+		return value;
+	}
+
+	public int delete(BoardDto boardDto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int value = 0;
+		
+		try {
+			String sql = "delete board where board_number = ?";
+			conn = ConnectionProvider.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, boardDto.getBoardNumber());
+			
+			value = pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		} finally {
+			jdbcUtil.close(pstmt);
+			jdbcUtil.close(conn);
+		}
+
+		return value;
+	}
+
 	/* select *
 		from (
         		select rownum as rnum, a.*

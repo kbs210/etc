@@ -1,0 +1,21 @@
+UUsseerr
+
+
+
+IIDDEExxcceeppttiioonn
+
+PPWWEExxcceeppttiioonn
+
+
+
+ppuubblliicc  ssttaattiicc  vvooiidd  llooggiinn
+
+((SSttrriinngg  IIDD,,  SSttrriinngg  PPWW))
+
+IIDD  ::  mmiinnhhoo,,  PPWW  ::  1122334455
+
+
+
+??  IIDD  -->>  IIDDEExxcceeppttiioonn
+
+??  PPWW  -->>  PPWWEExxcceeppttiioonnÿ

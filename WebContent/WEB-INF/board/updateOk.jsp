@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +8,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="../../index.jsp"></jsp:include>
-	<br><br>
-	<h3>안녕하세요 ${id} 님 즐거운 시간되세요</h3>
+	<c:set var="root" value="${pageContext.request.contextPath}" />
+	<c:if test="${check > 0 }">
+		<script type="text/javascript">
+			alert("게시글이 수정되었습니다.");
+			if(${pageNumber!=null}){
+				location.href="${root}/board/list.do?pageNumber=${pageNumber}";
+				} else{
+					location.href="${root}/board/list.do"
+				}
+		</script>
+	</c:if>
+	<c:if test="${check == 0 }">
+		<script type="text/javascript">
+			alert("게시글이 수정되지 않았습니다.");
+			if(${pageNumber!=null}){
+				location.href="${root}/board/list.do?pageNumber=${pageNumber}";
+				} else{
+					location.href="${root}/board/list.do"
+				}
+		</script>
+	</c:if>
 </body>
 </html>

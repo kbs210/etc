@@ -12,7 +12,9 @@
 </head>
 <body>
 	<form id="createform" name="createform"
-		action="${root}/board/writeOk.do" method="post"
+		<c:if test="${pageNumber!=null}">action="${root}/board/writeOk.do?pageNumber=${pageNumber}"</c:if> 
+		<c:if test="${pageNumber==null}">action="${root}/board/writeOk.do"</c:if> 
+		method="post"
 		onsubmit="return boardCheck(this)">
 		<div id="title">글목록</div>
 
@@ -66,10 +68,6 @@
          </span>
       </div>
 
-		
-		
-		
-		
 		
 	</form>
 </body>

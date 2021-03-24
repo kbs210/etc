@@ -16,6 +16,10 @@ public class WriteOkCommand implements Command{
 		request.setCharacterEncoding("utf-8");
 		
 		BoardDto boardDto = new BoardDto();
+		if(request.getParameter("pageNumber")!=null) {
+		int pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+		request.setAttribute("pageNumber", pageNumber);
+		}
 		
 		
 		boardDto.setBoardNumber(Integer.parseInt(request.getParameter("boardNumber")));
@@ -30,11 +34,14 @@ public class WriteOkCommand implements Command{
 		boardDto.setPassword(request.getParameter("password"));
 		boardDto.setWriteDate(new Date());
 		
+		logger.info(logMsg + boardDto.toString());
+		
 		int check = BoardDao.getInstance().insert(boardDto);
+		
+		
 		
 		request.setAttribute("check", check);
 		
-
 		
 		return "/WEB-INF/board/writeOk.jsp";
 	}

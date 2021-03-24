@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	넘어가졌나요?
 	<c:set var="root" value="${pageContext.request.contextPath}"/>
 	<c:if test="${check > 0 }">
 		<script type="text/javascript">
@@ -18,7 +19,7 @@
 	<c:if test="${check == 0 }">
 		<script type="text/javascript">
 			alert("회원 수정 되지 않았습니다.");
-			location.href="${root}/member/update.do";
+			location.href="${root}/board/update.do";
 		</script>
 	</c:if>
 </body>

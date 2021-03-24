@@ -15,6 +15,9 @@ public class BoardDto {
 	private int sequenceNumber;
 	private int sequenceLevel;
 	private int	readCount;
+	private String fileName;
+	private String path;
+	private long fileSize;
 	public int getBoardNumber() {
 		return boardNumber;
 	}
@@ -81,15 +84,35 @@ public class BoardDto {
 	public void setReadCount(int readCount) {
 		this.readCount = readCount;
 	}
+	public String getFileName() {
+		return fileName;
+	}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
+	public long getFileSize() {
+		return fileSize;
+	}
+	public void setFileSize(long fileSize) {
+		this.fileSize = fileSize;
+	}
 	@Override
 	public String toString() {
-		return "BoardDao [boardNumber=" + boardNumber + ", writer=" + writer + ", subject=" + subject + ", email="
+		return "BoardDto [boardNumber=" + boardNumber + ", writer=" + writer + ", subject=" + subject + ", email="
 				+ email + ", content=" + content + ", password=" + password + ", writeDate=" + writeDate
 				+ ", groupNumber=" + groupNumber + ", sequenceNumber=" + sequenceNumber + ", sequenceLevel="
-				+ sequenceLevel + ", readCount=" + readCount + "]";
+				+ sequenceLevel + ", readCount=" + readCount + ", fileName=" + fileName + ", path=" + path
+				+ ", fileSize=" + fileSize + "]";
 	}
 	public BoardDto(int boardNumber, String writer, String subject, String email, String content, String password,
-			Date writeDate, int groupNumber, int sequenceNumber, int sequenceLevel, int readCount) {
+			Date writeDate, int groupNumber, int sequenceNumber, int sequenceLevel, int readCount, String fileName,
+			String path, long fileSize) {
 		super();
 		this.boardNumber = boardNumber;
 		this.writer = writer;
@@ -102,10 +125,14 @@ public class BoardDto {
 		this.sequenceNumber = sequenceNumber;
 		this.sequenceLevel = sequenceLevel;
 		this.readCount = readCount;
+		this.fileName = fileName;
+		this.path = path;
+		this.fileSize = fileSize;
 	}
-	
 	public BoardDto() {
 		super();
 	}
+	
+
 	
 }
