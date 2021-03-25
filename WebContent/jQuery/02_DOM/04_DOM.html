@@ -14,7 +14,10 @@
 <script type="text/javascript">
 	$(function () {
 		$("img").click(function () {
-			$(".img_nature").prepend($("img:last"));
+			/* var a = $("img.last");
+			$(".img_nature").prepend($("img:last")); */
+			var a = $("img:last").clone();
+			$(".img_nature").prepend(a);
 		})
 	})
 </script>
