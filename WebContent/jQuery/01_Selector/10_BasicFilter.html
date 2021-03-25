@@ -10,6 +10,31 @@
 		$("p:first").css("color", "blue");
 		$("p:last").css("color", "purple");
 		$("p:eq(2)").css("color", "green");//index값
+		
+		//class가 first인 태그의 자식 중에 짝수번째 li blue색상으로 글자색 변경
+		$(".first > li:even").css("color", "blue");
+		
+		//class가 first인 태그의 자식 중에 홀수번째 li odd red색상으로 글자색변경
+		$(".first > li:odd").css("color", "red");
+		
+		//class가 second인 태그의 자식 중에 첫번째 li의 red색상으로 글자색변경
+		$(".second > li:first").css("color", "red");
+		
+		//class가 second인 태그의 자식 중에 마지막 li의 blue색상으로 글자색변경
+		$(".second > li:last").css("color", "blue");
+		
+		//class가 second인 태그의 자식 중에 인덱스가 2인 li의 색상을 yellow	
+		$(".second > li:eq(2)").css("color", "yellow");
+		
+		//class가 third인 태그의 자식 중 인덱스가 2보다 큰 li 태그
+		$(".third > li:gt(2)").css("color", "red");
+
+		//class가 third인 태그의 자식 중 인덱스가 2보다 작은 li 태그
+		$(".third > li:lt(2)").css("color", "blue");
+		
+		//class가 third인 태그의 자식 중 인덱스가 2가 아닌 li 태그
+		$(".third > li:not(:eq(2))").css("font-size", "30px");
+		
 	});
 </script>
 </head>
