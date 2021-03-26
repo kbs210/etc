@@ -16,7 +16,7 @@
 		$("img").click(function () {
 			/* var a = $("img.last");
 			$(".img_nature").prepend($("img:last")); */
-			var a = $("img:last").clone();
+			var a = $(this).clone();
 			$(".img_nature").prepend(a);
 		})
 	})

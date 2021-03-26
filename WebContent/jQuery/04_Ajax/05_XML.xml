@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<member xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<student>
+		<stdNumber>1001</stdNumber>
+		<stdName>이길동</stdName>
+		<score>35</score>
+	</student>
+
+	<student>
+		<stdNumber>1002</stdNumber>
+		<stdName>삼길동</stdName>
+		<score>65</score>
+	</student>
+	
+	<student>
+		<stdNumber>1003</stdNumber>
+		<stdName>홍길동</stdName>
+		<score>93</score>
+	</student>
+	
+</member>
