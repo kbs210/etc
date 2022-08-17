@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>htmltest</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>Example_01</servlet-name>
+		<servlet-class>com.java.servlet.Example_01</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Example_01</servlet-name>
+		<url-pattern>/com/java/servlet/Example_01</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>Example_02</servlet-name>
+		<servlet-class>com.java.servlet.Example_02</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Example_02</servlet-name>
+		<url-pattern>/com/java/servlet/Example_02</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Example_03</servlet-name>
+		<servlet-class>com.java.servlet.Example_03</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Example_03</servlet-name>
+		<url-pattern>/com/java/servlet/Example_03</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Example_04</servlet-name>
+		<servlet-class>com.java.servlet.Example_04</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Example_04</servlet-name>
+		<url-pattern>/com/java/servlet/Example_04</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Example_05</servlet-name>
+		<servlet-class>com.java.servlet.Example_05</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Example_05</servlet-name>
+		<url-pattern>/com/java/servlet/Example_05</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>hhh</servlet-name> <!-- 3. 2.에 해당하는 아이디를 찾음 -->
+		<servlet-class>com.java.servlet.HelloServlet</servlet-class> <!-- 4. 해당 아이디가 가리키는 경로 -->
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>hhh</servlet-name> <!-- 2. 해당 입값의 아이디  -->
+		<url-pattern>/hs</url-pattern> <!-- 1. 검색창에 입력하는 내용   (1 -> 4)   -->
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>a</servlet-name> <!-- 3. 2.에 해당하는 아이디를 찾음 -->
+		<servlet-class>com.java.servlet.Gugudan</servlet-class> <!-- 4. 해당 아이디가 가리키는 경로 -->
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>a</servlet-name> <!-- 2. 해당 입값의 아이디  -->
+		<url-pattern>/gg</url-pattern> <!-- 1. 검색창에 입력하는 내용   (1 -> 4)   -->
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>c</servlet-name> <!-- 3. 2.에 해당하는 아이디를 찾음 -->
+		<servlet-class>com.java.servlet.ImageCounter</servlet-class> <!-- 4. 해당 아이디가 가리키는 경로 -->
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>c</servlet-name> <!-- 2. 해당 입값의 아이디  -->
+		<url-pattern>/cc</url-pattern> <!-- 1. 검색창에 입력하는 내용   (1 -> 4)   -->
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Example_06</servlet-name>
+		<servlet-class>com.java.servlet.Example_06</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Example_06</servlet-name>
+		<url-pattern>/com/java/servlet/Example_06</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>cookieset</servlet-name>
+		<servlet-class>com.java.servlet.Example_09_CookieSet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>cookieset</servlet-name>
+		<url-pattern>/com/java/servlet/Example_09_CookieSet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>cookieget</servlet-name>
+		<servlet-class>com.java.servlet.Example_09_CookieGet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>cookieget</servlet-name>
+		<url-pattern>/com/java/servlet/Example_09_CookieGet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>cookiedel</servlet-name>
+		<servlet-class>com.java.servlet.Example_09_CookieDel</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>cookiedel</servlet-name>
+		<url-pattern>/com/java/servlet/Example_09_CookieDel</url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	
+	function Click(){
+		window.alert("click 함수");
+		window.open("/htmltest/javascript/b.html", "", "width=300px, height=200px")
+		//window객체 생략가능
+	}
+	
+	function myNaver(){
+		window.open("https://www.navere.com", "width=300px, height=200px")
+	}
+	
+	</script>
+
+</head>
+<body onload="myNaver()">
+
+	<div>
+	
+		<div>
+		
+			<span>아이디:</span>
+			<input type="text">
+			<input type="button" value="아이디 확인" onclick="Click()">
+			 		
+		</div>
+
+	</div>
+	
+	
+
+</body>
+</html>

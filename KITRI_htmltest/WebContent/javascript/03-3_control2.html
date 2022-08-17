@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 부모창의 데이터를 전탈하기 위한 함수
+		function setOpenerData(data){
+			// data에 들어있는 값을 부모창에 부모창에 있는 함수를 불러와서 바로 직접 전달
+			// 03-3_control1.html 안에 위치한 setData(data) function
+			opener.setData(data);
+			self.close();
+		}
+		
+		function reloadOpener(){
+			opener.location.reload();
+			self.close();
+		}
+		
+		
+	</script>
+	
+	<a href="javascript:setOpenerData('하하하')">하하하</a>
+	<a href="javascript:setOpenerData('호호호')">호호호</a>
+	<a href="javascript:reloadOpener()">부모창을 새로고침</a>
+	
+</body>
+</html>

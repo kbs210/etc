@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	
+		//naverigator
+		//브라우저의 정보가 내장되어있는 객체
+		//서로 다른 브라우저를 구분 할 수 있으며
+		//브라우저 별로 다르게 처리가 가능
+		
+		//브라우저의 코드네임
+		console.log(navigator.appCodeName);
+		//브라우저의 이름
+		//(익스플로러 11 이상, 크롬, 파이어폭스, 사파리 모두 Netscape)
+		//(익스플로러 11 이하 버전, 위와 동일한 구버전 모두 Mozilla)
+		console.log(navigator.appName);
+		//브라우저의 버전
+		console.log(navigator.appVersion);
+		//쿠키 허용 여부
+		console.log(navigator.cookieEnabled);
+		//현재 운영 체제
+		console.log(navigator.platform);
+		//제일 자주 사용되는 속성! : android, iphone, web이 서로 다른 화면 표시
+		console.log(navigator.userAgent);
+		//브라우저의 언어
+		console.log(navigator.language);
+		
+/* 			 location, history
+			location : 객체를 이용해서 현재 URL과 관련된 정보를 알 수 있다
+			location.href : 프로퍼티에 값을 할당 하지 않으면 현재 URL을 조회
+							프로퍼티에 값을 할당 하면 할당된 URL로 이동
+			location.reload() : 현재 페이지를 새로고침
+
+			history 브라우저의 페이지 이력을 담는 객체
+			history.back(): 뒤로가기
+			history.forward(): 앞으로가기
+			
+			
+*/
+
+
+			
+		
+		console.log(location);
+	/* 	location.href = "http://www.naver.com" */
+		
+	</script>
+
+</body>
+</html>

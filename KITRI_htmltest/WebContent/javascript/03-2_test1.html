@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<div id = "today">
+		오늘은 날시가 참 추워요 <br>
+		즐거운 하루 보내세요
+	</div>
+	
+	<button type = "button" onclick = "javascript : openWindow()">창열기 버튼</button>
+	
+	<script type="text/javascript">
+	
+		/* 
+		
+			open 함수 사용
+			window.open('페이지 URL', '창이름', '특성', 히스토리 대체여부)
+			
+			창이름(string) : open할 대상 지정 (_blank, _self)지정
+			특성(string) : 새로열릴 창의 가로세로 길이 위치좌표 등
+			히스토리 대체여부(boolean) : 현재페이지 히스토리에 덮어쓸지 여부
+			
+			
+		*/
+	
+		// 브라우저마다 문법이 다름으로 확인 필요
+		function openWindow(){
+				window.open(
+				'http://localhost:8181/htmltest/javascript/03-2_test2.html',
+				'mywin',
+				'width = 300px, height = 200px, top = 50px, left = 50px',
+				'menubar = yes',
+				'scrollbars = yes'
+				);
+			}
+	
+	</script>
+	
+	
+
+	
+</body>
+</html>
