@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.spotlight{
+		background-color: red;
+	}
+	.redtext{
+		color: green;
+	}
+</style>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function name() {
+		$("#first").addClass("spotlight")
+		$("#second").addClass("redtext")
+		$("#third").addClass("spotlight redtext")
+		
+		var arr = new Array();
+		
+		arr.push($("#first").text());
+		arr.push($("#second").text());
+		arr.push($("#third").text());
+		alert(arr);
+	})
+	
+	window.onload = function(){
+		var div = document.getElementById("div");
+		var len = div.length;
+		
+		for (var i = 0; i<array.length; i++){
+			
+		}
+	
+	}
+	
+	
+</script>
+
+</head>
+<body>
+	<div id="first">사과</div>
+	<div id="second">바나나</div>
+	<div id="third">딸기</div>
+</body>
+</html>

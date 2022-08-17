@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div, p{
+	width: 100px;
+	height: 80px;
+	float: left;
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 3px 3px 5px;
+	background: #EEEEEE;
+}
+#second{
+	width: 60px;
+	height: 30px;
+	font-size: 12px;
+	background: #ddaa99;
+}
+</style>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		//#first의 모든 동생 중에 div태그 변경하기
+		$("#first ~ div").css("border", "5px solid #EA9");
+	});
+</script>
+</head>
+<body>
+<h2>매물 안내</h2>
+<h4>거래완료된 매물 정보는 완료 목록을 참고하시길 바랍니다</h4>
+
+<div>
+	급매<br>
+	빌라 33평형 방3, 욕실2
+</div>
+<div id="first">
+	매매<br>
+	현대APT 27평형 남향
+</div>
+<div>
+	임대<br>
+	푸르지오 오피스텔 18평형
+</div>
+<div>
+	임대<br>
+	<div id="second">자이 APT 46평형</div>
+</div>
+
+<p>특별분양 수익형 오피스텔</p>
+
+</body>
+</html>

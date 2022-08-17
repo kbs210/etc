@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$("#coffee").next().css("color", "green");
+		$("#coffee").prev().css("color", "green");
+		
+		$("#strawberry").nextAll().css("color", "red");
+		$("#strawberry").prevAll().css("color", "blue")
+		
+		$("#orange").siblings().css("color", "orange")
+		$("#orange").siblings("#tomato").css("fontSize", "50px")
+	});
+</script>
+</head>
+<body>
+
+
+
+	<h3>카라멜마끼아또</h3>
+	<h3>아메리카노</h3>
+	<h3 id="coffee" style="color:blue">바닐라라떼</h3>
+	<h3>흑당버블카페라떼</h3>
+	<h3>시크릿라떼</h3>
+	<br><br>
+	
+	
+	<div id="first">
+		<div>사과</div>
+		<div>바나나</div>
+		<div id="strawberry">딸기</div>
+		<div>수박</div>
+		<div id="melon">메론</div>
+	</div>
+	<br><br>
+	
+	
+	<div id="second">
+		<div>포도</div>
+		<div id="orange">귤</div>
+		<div>참외</div>
+		<div id="tomato">토마토</div>
+	</div>
+	
+	
+	
+</body>
+</html>

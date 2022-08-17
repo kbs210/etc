@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$.ajax({
+			
+			url: "04_JSON.txt",
+			type: "GET",
+			dataType: "json",
+			success: function (data) {
+				
+				var memberList = data.member;
+				
+				$(memberList).each(function (i) {
+					var member = memberList[i];
+					
+					var html = "<span>" + member.stdNumber + "</span>&nbsp;&nbsp;"
+					html += "<span>" + member.stdName + "</span>&nbsp;&nbsp;"
+					html += "<span>" + member.score + "</span><br>"
+					
+					$("#resultDisplay").append(html);
+				})
+				
+				/*$(memberList).each(function (i, element) {
+					var member = element;
+				}) */
+				
+			}
+			
+		})
+	})
+</script>
+</head>
+<body>
+	<div id="resultDisplay"></div>
+</body>
+</html>
