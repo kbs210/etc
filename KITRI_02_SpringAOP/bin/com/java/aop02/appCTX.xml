@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<bean id="mom" class="com.java.aop02.Mom"></bean>
+	<bean id="papa" class="com.java.aop02.Papa"></bean>
+	<bean id="baby" class="com.java.aop02.Baby"></bean>
+	
+	<!-- 공통 코드 -->
+	<bean id="p" class="com.java.aop02.PASpect"></bean>
+	
+	<!-- AOP -->
+	<aop:config>
+		<!-- 공통 클래그 -->
+		<aop:aspect id="e" ref="p">
+			<!-- 핵심 클래그 -->		
+			<aop:pointcut expression="within(com.java.aop02.*)" id="m"/> <!-- bean에 있는 해당 클래스를 찾음 -->
+			<!-- <aop:pointcut expression="execution(* com.java.aop02..*.work(..))" id="m"/> 특정 메소드에서만 실행 -->
+			<aop:before method="awake" pointcut-ref="m"/>
+			<aop:after method="sleep" pointcut-ref="m"/>
+		</aop:aspect>
+	</aop:config>
+	
+</beans>
