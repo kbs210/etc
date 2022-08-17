@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+ function checkForm(obj){
+	 if(obj.sign.value != "+" & obj.sign.value != "-" & obj.sign.value != "/" & obj.sign.value != "*"){
+		alert("부호를 제대로 입력하세요")		 
+		obj.sign.focus();
+	 	return false;
+	 }
+	 if (obj.sign.value == "/"){
+		 if (obj.second_no.value == 0){
+			 alert("0으로 나눌 수 없습니다")
+			 obj.second_no.focus();
+			 return false;
+		 }
+	 }
+ }
+
+</script>
+</head>
+<body>
+
+	<form action="http://localhost:8181/htmltest/com/java/servlet/Example_05" method="post" onsubmit="return checkForm(this)">
+	
+		<label>숫자1</label>
+		<input type="number" name="first_no">
+		
+		<br><br>
+		
+		<label>부호</label>
+		<input type="text" name="sign" maxlength="1">
+		
+		<br><br>
+		
+		<label>숫자2</label>
+		<input type="number" name="second_no"> 
+		
+		<br><br>
+		
+		<input type="submit" value="전송">	
+		<input type="reset" value="취소">	
+	
+	
+	</form>
+		
+</body>
+</html>

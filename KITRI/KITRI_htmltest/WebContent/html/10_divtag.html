@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+	div{
+		background-color : red;
+	}
+	
+	span {
+		background-color : blue;
+	}
+
+</style>
+
+</head>
+
+
+<body>
+	<!--
+		div : division 나누기, 영역을 나눔
+			시각적인 효가가 필요할 때 사용하는 태그
+			하나의 페이지 안에서 영역을 나누는 것
+		
+		span : 줄을 바꾸거나 영역을 나누지 않고 일정한
+			범위를 지정하여 속성을 주는 목적
+			
+		div vs span
+		div : 해당 영역 전체 공간을 차지
+		span : 자기 내용만큼의 공간만 차지
+	-->
+	
+	
+	<div>
+		<div>block1</div>
+		<div>block2</div>
+	</div>
+	
+	<span>inline1</span>
+	<span>inline2</span>
+	
+	<br><br><br><br><br><br>
+	
+	<style type="text/css">
+		.ex_margin1 { 
+			width:500px; 
+			height:500px; 
+			margin:30px 25px; 
+			padding:10px; 
+			color: white; 
+			background-color: black; 
+		}
+		
+		span {
+			display:inline-block; 
+			width:200px;
+			margin: 5px 5px;
+			vertical-align: top;
+		}
+	</style>
+	
+	<div class = "ex_margin1">
+	
+		<span
+			style="
+				width:100px;
+				background-color: orange;
+				color : white; 
+				text-align : left;
+		" >
+			Left
+		</span>
+		
+		<span style="width:400px; background-color: green; color : white; text-align : right;"> right</span> <br>
+		<span style="background-color: yellow; color : black; text-align : center;">footer</span>
+	
+	</div>
+	
+	
+</body>
+
+
+</html>

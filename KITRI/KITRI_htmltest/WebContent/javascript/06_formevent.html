@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+	form event
+	focus 텍스트 창의 경우 커서를 위치시켜 입력가능
+			버튼의 경우 엔터키를 입력해서 클릭효과를 나타낸다
+	blur 창의 경우에는 최소화를 시켜버린다
+	
+	
+	focus, blur, change, select, submit, reset
+ -->
+
+<!--
+	onfocus 해당 엘리먼트에 포커스가 생겼을 때
+	onblur 해당 엘리먼트에 포커스가 사라졌을 때
+-->
+	<input type="text" onfocus="myfocus(this)" onblur="myblur(this)">
+	<br><br>
+	
+<!-- 
+	폼컨트롤 값이 변경 되었을 때
+ -->
+	<select onchange="mychange(this)">
+		<option value="사과">사과</option>
+		<option value="바나나">바나나</option>
+		<option value="딸기">딸기</option>
+		<option value="멜론">멜론</option>
+		<option value="배">배</option>
+	</select>
+	
+	<input type="button" value="버튼입니다" onblur="myselect(this)">
+	<br><br><br><br>
+	<input type="text" value="집에 가고싶다오" onselect="myselect(this)">
+
+	<script type="text/javascript">
+	
+		function myfocus(obj){
+			obj.value="아이디를 입력하세요";
+		}
+		
+		function myblur(obj){
+			obj.value="중복되는 아이디가 있습니다";
+		}
+		
+		function mychange(obs){
+			alert(obj.value);
+		}
+			
+		function myselect(obj) {
+			alert();
+		}
+	
+	</script>
+</body>
+</html>

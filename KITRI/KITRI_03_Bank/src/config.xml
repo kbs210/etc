@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<!-- DB설정 -->
+	<!-- Connection 대체 -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url"
+			value="jdbc:oracle:thin:@127.0.0.1:1521:xe"></property>
+		<property name="username" value="spring"></property>
+		<property name="password" value="1234"></property>
+	</bean>
+	<!-- PrepareStatment 대체 -->
+	<bean id="sqlSessionFactoryBean"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mapperLocations"
+			value="classpath:com/java/bank/dao/mapper/BankMapper.xml"></property>
+	</bean>
+	<!-- conn과 pstmt를 담아 dao에서 사용할 template -->
+	<bean id="sqlSessionTemplate"
+		class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactoryBean"></constructor-arg>
+	</bean>
+
+	<!-- BankDto 생성 -->
+	<bean id="bankDto" class="com.java.bank.dto.BankDto" />
+	<!-- BankDao 생성 -->
+	<bean id="bankDaoImpl" class="com.java.bank.dao.BankDaoImpl">
+		<constructor-arg ref="sqlSessionTemplate"></constructor-arg>
+	</bean>
+	<!-- Ui 생성 -->
+	<bean id="bankView" class="com.java.bank.ui.BankView">
+		<property name="bankDto" ref="bankDto" />
+		<property name="bankDao" ref="bankDaoImpl" />
+	</bean>
+
+	<!-- 공통클래스 생성 -->
+	<bean id="logAspect" class="com.java.bank.aop.LogAspect"></bean>
+	<!-- AOP생성 -->
+	<aop:config>
+		<aop:pointcut expression="within(com.java.bank.dao.*)"
+			id="pMethod" />
+		<aop:aspect id="exAspect" ref="logAspect">
+			<aop:around method="advice" pointcut-ref="pMethod" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>

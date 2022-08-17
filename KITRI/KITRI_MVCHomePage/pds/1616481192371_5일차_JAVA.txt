@@ -1,0 +1,75 @@
+μμµµλλ€€  μμ††λλ„„XX
+
+PPoowweerrOOnn(())  μμ‹‹λλ™™
+
+PPoowweerrOOffff(())  μμ‹‹λλ™™  λλ„„κκΈΈ°°
+
+ssttoopp(())    --4400kkmm//hh
+
+rruunn(())  ++3300kkmm//hh,,  --1100  LLiitteerr
+
+
+
+ttrraannssffeerr((SSttrriinngg  __mmooddee))
+
+PP  ppaarrkk
+
+DD  ddrriivveerr
+
+RR  bbaacckk
+
+BB  bboooosstteerr
+
+NN  nnoorrmmaall
+
+
+
+bboooosstteerr(())  μμµµκκ³³    μμ††λλ„„,,  --5500  LLiitteerr
+
+
+
+
+
+ccllaassss  ::  TTVV
+
+μμ††μμ„„±±  ::		μμ  μμ΅΅°°μμ‚‚¬¬				SSttrriinngg  mmaakkeerr
+
+		νν™™””λλ©©΄΄νν¬¬κκΈΈ°°				iinntt  ssccrreeeennSSiizzee
+
+		μμ±±„„λλ„„				iinntt  cchhaanneell
+
+		λλ³³ΌΌλλ¥¥¨¨				iinntt  vvoolluummee
+
+		μμ  „„μμ››				bboooolleeaann  ppoowweerr
+
+
+
+κκΈΈ°°λλ¥¥  ::		μμΌΌκκΈΈ°°				vvooiidd  ppoowweerrOOnn(())
+
+		λλ„„κκΈΈ°°				vvooiidd  ppoowweerrOOffff(())  >>>>>>>>>>  ppoowweerr((bboooolleeaann  ppoowweerr))
+
+		νν••μμ±±„„λλ„„μμ„„				iinntt  cchhaanneellUUpp(())
+
+		νν••μμ±±„„λλ„„μμ••„„λλ		iinntt  cchhaanneellDDoowwnn(())
+
+		μμ±±„„λλ„„λλ³³€€κκ²²½½				iinntt  cchhaannggeeCChhaanneell((iinntt  cchhaanneell))
+
+		μμ΄΄μμ  „„μμ±±„„λλ„„λλ΅΅                        iinntt  cchhaannggeeBBeeffoorree(())
+
+
+
+		λλ³³ΌΌλλ¥¥¨¨μμ——……				vvooiidd  vvoolluummeeUUpp(())
+
+		λλ³³ΌΌλλ¥¥¨¨λλ‹‹¤¤μμ΄΄				vvooiidd  vvoolluummeeDDoowwnn(())
+
+		μμμμ††κκ±±°°				vvooiidd  mmuuttee(())
+
+
+
+
+
+
+
+
+
+ÿ

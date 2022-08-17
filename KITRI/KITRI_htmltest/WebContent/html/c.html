@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<style type = "text/css">
+		table{
+			width : 500px;
+			height : 500px;
+			text-align : center;
+		}
+		
+		th{
+			width : 100px;
+		}
+		
+		td{
+			width : 100px;
+			border : 1px solid black;
+		}
+		
+		.head{
+			background-color : gray;
+		}
+		
+		.firstcol{
+			background-color : yellow;
+		}
+		
+		.korean{
+			color : white;
+			background-color : red;
+		}
+		
+		.math{
+			color : white;
+			background-color : green;
+		}
+		
+		.khistory{
+			color : white;
+			background-color : black;
+		}
+		
+		.cemical{
+			color : black;
+			background-color : orange;
+		}
+		
+		.english{
+			color : white;
+			background-color : purple; 
+		}
+		
+		.cape{
+			color : white;
+			background-color : blue;
+		}
+		
+		.launch{
+			font-size : 35px;
+			background-color : skyblue;
+		}
+	</style>
+
+	<table>
+		<caption> 시간표 </caption>
+		
+		<tr>
+			<th></th>
+			<th class = "head">2</th>
+			<th class = "head">3</th>
+			<th class = "head">4</th>
+			<th class = "head">5</th>
+			<th class = "head">6</th>
+		</tr>
+		
+		<tr>
+			<th class = "firstcol">7</th>
+			<td class = "korean" rowspan = "3">8</td>
+			<td class = "khistory" rowspan = "2">9</td>
+			<td bgcolor = "DarkCyan">10</td>
+			<td class = "math" rowspan = "4">11</td>
+			<td rowspan = "2" bgcolor="Khaki">12</td>
+		</tr>
+		
+		<tr>
+			<th class = "firstcol">13</th>
+			<td class = "english" rowspan = "3">16</td>
+		</tr>
+
+		<tr>
+			<th class = "firstcol">19</th>
+			<td class = "cemical" rowspan = "2">21</td>
+			<td rowspan = "2" bgcolor="LightCoral">24</td>
+		</tr>
+		
+		<tr>
+			<th class = "firstcol">25</th>
+			<td bgcolor="MediumSpringGreen">26</td>
+		</tr>
+		
+		<tr>
+			<th></th>
+			<td class = "launch" colspan = "5">32</td>
+		</tr>		
+	
+		<tr>
+			<th class = "firstcol">37</th>
+			<td class = "math" rowspan = "3">38</td>
+			<td rowspan = "2" bgcolor="MediumSlateBlue">39</td>
+			<td class = "korean" rowspan = "3">40</td>
+			<td class = "english" rowspan = "3">41</td>
+			<td bgcolor="OrangeRed">42</td>
+		</tr>
+		
+		<tr>
+			<th class = "firstcol">43</th>
+			<td class = "cape" rowspan = "2">48</td>
+		</tr>
+		
+		<tr>
+			<th class = "firstcol">49</th>
+			<td class = "cape">51</td>
+		</tr>	
+	
+	
+	</table>
+	
+</body>
+</html>

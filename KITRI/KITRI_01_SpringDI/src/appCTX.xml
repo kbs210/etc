@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- 객체를 생성하는 역할 -->
+	<!-- 객체 발생 -->
+	<bean id="su" class="com.java.di01.Su"></bean>
+	<bean id="example" class="com.java.di02.Example"></bean>
+	<bean id="testing" class="com.java.di02.Testing"></bean>
+
+
+	<!-- constructor-arg는 생성자/ property는 setter  -->
+
+	<!-- 생성자 -->
+	<bean id="sub1" class="com.java.di03.Sub">
+		<constructor-arg>
+			<value>70</value>
+		</constructor-arg>
+		<constructor-arg value="80" />
+	</bean>
+
+	<bean id="sub2" class="com.java.di03.Sub">
+		<property name="x">
+			<value>10</value>
+		</property>
+		<property name="y" value="31" />
+	</bean>
+
+	<bean id="aa" class="com.java.di04.AA">
+		<constructor-arg>
+			<value>10</value>
+		</constructor-arg>
+		<constructor-arg value="20" />
+	</bean>
+	
+	<bean id="bb" class="com.java.di04.BB">
+		<property name="apple" value="빨게"></property>
+		<property name="banana" value="맛있어"></property>
+	</bean>
+	
+	<bean id="cc" class="com.java.di04.CC">
+		<constructor-arg ref="aa"></constructor-arg>
+		<constructor-arg ref="bb"></constructor-arg>
+	</bean>
+	
+	<bean id="messageEn" class="com.java.di05.MessageEn"></bean>
+	<bean id="messageKr" class="com.java.di05.MessageKr"></bean>
+	
+	
+	
+</beans>

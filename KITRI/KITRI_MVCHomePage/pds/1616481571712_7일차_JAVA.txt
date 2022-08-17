@@ -1,0 +1,137 @@
+                  VVeehhiiccllee
+
+                  SSttrriinngg    ttyyppee
+
+                  vvooiidd  rruunn(())
+
+          ----------------------------------
+
+          ||                                      ||
+
+  BBuuss                                  TTeexxii
+
+BBuuss((DDrriivveerr))                TTeexxii((DDrriivveerr))
+
+vvooiidd  pprriiccee(())                vvooiidd  pprriiccee(())
+
+vvooiidd  rruunn(())                    vvooiidd  rruunn(())
+
+
+
+DDrriivveerr
+
+nnaammee
+
+
+
+
+
+                          UUnniittss
+
+                        iinntt  xx,,yy;;
+
+                        iinntt  hhpp
+
+                        iinntt  mmpp
+
+                        iinntt  aattttaacckkLLeevveell
+
+                        iinntt  ddeeffeenncceeLLeevveell
+
+                        SSttrriinngg  ttyyppee
+
+                        vvooiidd  mmoovvee((iinntt  xx,,  iinntt  yy))
+
+WWoorrkkeerr    				          SSooiillddeerr		              VVeehhiiccllee
+
+vvooiidd  mmiinnee((iinntt  xx,,  iinntt  yy))      vvooiidd  aattttaacckk((UUnniittss))        vvooiidd  uuppggrraaddee(())  33λλ²²
+
+                                                                                                                    aattttaacckkLLeevveell++++
+
+                                                                                                                    ddeeffeenncceeLLeevveell++++
+
+--SSCCVV
+
+vvooiidd  ffiixx((SSCCVV  oorr  VVeehhiiccllee))
+
+          				        
+
+--DDrroonnee				        --  MMaarriinnee      		              --TTaannkk
+
+                                                                vvooiidd  ssttiimmppaacc(())                    SSttrriinngg  mmooddee  ==  NNoorrmmaall,,  SSiieeggee    
+
+                                                                aattttaacckklleevveell++++
+
+                                                                hhpp----
+
+--PPrroovvee				        --  FFiirreebbeett                                    
+
+                                                                vvooiidd  ssttiimmppaacc(())      
+
+                                                                aattttaacckklleevveell++++        
+
+                                                                hhpp----                                                                                                      
+
+
+
+
+
+
+
+
+
+            AA
+
+        ||          ||
+
+BB                    CC
+
+  ||                      ||
+
+DD                    EE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ÿ

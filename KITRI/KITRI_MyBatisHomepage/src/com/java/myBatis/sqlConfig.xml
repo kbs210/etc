@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- 환경설정 -->
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="UNPOOLED">
+			<!-- JDBC 드라이버 -->
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+				<property name="username" value="mvc" />
+				<property name="password" value="mvc" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!-- 쿼리문이 들어가는 Mapper 경로 지정
+		controller에서는 프로퍼티스에 파일명과 경로르 지정해줬는데 오류가 나면 무시하고 진행되지만
+		여기서는 파일을 못찾으면 아예 실해되지 않는다
+	 -->
+	<mappers>
+		<mapper resource="com/java/reply/model/mapper/ReplyMapper.xml" />
+				    		
+	</mappers>
+</configuration>

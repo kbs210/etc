@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>htmltest</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+		<servlet-name>Controller</servlet-name> <!-- 3. 2.에 해당하는 아이디를 찾음 -->
+		<servlet-class>com.java.controller.FrontController</servlet-class> <!-- 4. 해당 아이디가 가리키는 경로 -->
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Controller</servlet-name> <!-- 2. 해당 입값의 아이디  -->
+		<url-pattern>*.do</url-pattern> <!-- 1. 검색창에 입력하는 내용   (1 -> 4)   -->
+	</servlet-mapping>
+	
+	
+
+</web-app>
